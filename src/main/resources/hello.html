@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="Pt-BR" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ramais UNIAESO Webapp</title>
+</head>
+<body>
+    <h1>Ramais</h1>
+    <form th:action="@{/adduser}" th:object="${ramal}" method="post">
+        <label for="ramalId">ID:</label>
+        <input type="text" th:field="*{id}" id="ramalId">
+        <br>
+        <label for="ramalData">Ramal:</label>
+        <input type="text" th:field="*{ramal}" id="ramalData">
+        <br>
+        <label for="ramalDesc">Descrição:</label>
+        <input type="text" th:field="*{descricao}" id="ramalDesc">
+        <br>
+        <input type="submit" value="Salvar">
+    </form>
+</body>
+</html>
