@@ -1,0 +1,108 @@
+/*
+body{
+    background-color: #1c0470;
+    color: antiquewhite;
+    text-align: center;
+}
+.inputs-label{
+    gap: 2%;
+}
+.forms{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 15%;
+    margin: auto; 
+}
+input{
+    border: 2px solid #ee0dc8;
+    border-radius: 8px;
+    padding: 3px;
+}
+.input-save > input{
+    background-color: #ee0dc8;
+    color: antiquewhite;
+    font-size: medium;
+    font-weight: 700;
+    width: 100px;
+    margin-top: 15px;
+}
+.input{
+    text-align: left;
+    padding: 2%;
+}
+table{
+    text-align: center;
+}
+*/
+body{
+    background-color: #1c0470;
+    color: antiquewhite;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+.forms{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 15%;
+    margin: auto; 
+}
+input{
+    border: 2px solid #ee0dc8;
+    border-radius: 8px;
+    padding: 3px;
+}
+.input-save > input{
+    background-color: #ee0dc8;
+    color: antiquewhite;
+    font-size: medium;
+    font-weight: 700;
+    width: 100px;
+    margin-top: 15px;
+}
+.input-save > input:hover{
+    background-color: #0056b3;
+    border: 2px solid #0056b3;
+}
+.input{
+    text-align: left;
+    padding: 2%;
+}
+table{
+    text-align: center;
+}
+.back-button {
+    margin-top: 20px;
+}
+
+.back-button .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: antiquewhite;
+    background-color: #ee0dc8;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.back-button .btn:hover {
+    background-color: #0056b3;
+}
+table {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+table > thead > tr {
+
+    align-items: center;
+
+}
+table > thead > tr > th{
+ padding: 10px 10px 35px 10px;
+ text-align: center;
+}

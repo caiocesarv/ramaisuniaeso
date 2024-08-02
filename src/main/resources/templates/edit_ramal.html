@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Editar Ramal</title>
+</head>
+
+<body>
+    <h1>Editar Ramal</h1>
+    <form th:action="@{/update/{id}(id=${ramal.id})}" th:object="${ramal}" method="post">
+        <div class="forms">
+            <div class="input">
+                <label for="ramalData">Ramal:</label>
+                <input type="text" th:field="*{ramal}" id="ramalData">
+            </div>
+            
+            <div class="input">
+                <label for="ramalDesc">Descrição:</label>
+                <input type="text" th:field="*{descricao}" id="ramalDesc">
+            </div>
+            
+            <div class="input-save">
+                <input type="submit" value="Atualizar">
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>
