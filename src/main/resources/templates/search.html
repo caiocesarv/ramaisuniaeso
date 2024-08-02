@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Pesquisar Ramais</title>
+</head>
+<body>
+    <h1>Pesquisar Ramais</h1>
+    <form th:action="@{/search}" method="get">
+        <div class="forms">
+            <div class="input">
+                <label for="searchDesc">Descrição:</label>
+                <input type="text" name="descricao" id="searchDesc">
+            </div>
+            <div class="input-save"><input type="submit" value="Buscar"></div>
+        </div>
+    </form>
+
+    <h2>Resultados da Pesquisa</h2>
+    <table>
+        <thead>
+            <tr>
+                <th class="id">ID</th>
+                <th class="ramal">Ramal</th>
+                <th class="descricao">Descrição</th>
+                <th class="acoes">Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="ramal : ${listRamais}">
+                <td class="id-ramal" th:text="${ramal.id}">1</td>
+                <td class="ramal-ramal" th:text="${ramal.ramal}">1234</td>
+                <td class="descricao-ramal" th:text="${ramal.descricao}">Descrição Exemplo</td>
+                <td class="acoes-ramal">
+                    <a th:href="@{/edit/{id}(id=${ramal.id})}">Editar</a>
+                    <a th:href="@{/delete/{id}(id=${ramal.id})}">Deletar</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="back-button">
+        <a href="/" class="btn">Voltar</a>
+    </div>
+</body>
+</html>
